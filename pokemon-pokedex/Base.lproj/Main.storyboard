@@ -33,6 +33,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-k3-wQQ">
                                 <frame key="frameInset" minX="16" minY="129" width="343" height="518"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jis-La-7jD">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -84,16 +85,21 @@
                             <constraint firstItem="j73-xa-B9t" firstAttribute="top" secondItem="DTL-OA-n0g" secondAttribute="bottom" id="I8M-b0-RSx"/>
                             <constraint firstAttribute="trailing" secondItem="j73-xa-B9t" secondAttribute="trailing" id="KGq-Ot-Y72"/>
                             <constraint firstItem="LGd-PQ-iF8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LXH-ub-qBZ"/>
+                            <constraint firstItem="LbT-k3-wQQ" firstAttribute="top" secondItem="DTL-OA-n0g" secondAttribute="bottom" constant="20" id="LyD-EQ-o1w"/>
                             <constraint firstItem="DTL-OA-n0g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UA8-dT-Oja"/>
                             <constraint firstAttribute="trailing" secondItem="LbT-k3-wQQ" secondAttribute="trailing" constant="20" id="UnU-zR-AC3"/>
                             <constraint firstItem="DTL-OA-n0g" firstAttribute="top" secondItem="LGd-PQ-iF8" secondAttribute="bottom" id="XKW-jj-jCi"/>
                             <constraint firstAttribute="trailing" secondItem="DTL-OA-n0g" secondAttribute="trailing" id="a40-hB-cG9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j73-xa-B9t" secondAttribute="bottom" id="bbx-wF-IeS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LbT-k3-wQQ" secondAttribute="bottom" constant="20" id="cdZ-hJ-2vR"/>
                             <constraint firstItem="LbT-k3-wQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="moc-KD-vNs"/>
                             <constraint firstItem="LGd-PQ-iF8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rco-zg-O5u"/>
                             <constraint firstAttribute="trailing" secondItem="LGd-PQ-iF8" secondAttribute="trailing" id="v7j-Vi-PqJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="LbT-k3-wQQ" id="BV8-VO-V1v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
