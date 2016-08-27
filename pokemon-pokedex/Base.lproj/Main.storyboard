@@ -21,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-PQ-iF8">
@@ -148,19 +148,73 @@
                         <viewControllerLayoutGuide type="bottom" id="lKB-Mm-X5s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9kH-HL-Q5a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sux-VN-SlV">
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRK-P8-242">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-Nl-8bV">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-JT-K5T">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="u2P-Nd-BMf"/>
+                                                    <constraint firstAttribute="height" constant="25" id="zth-bE-qDM"/>
+                                                </constraints>
+                                                <state key="normal" image="back"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sux-VN-SlV">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="9GB-HZ-eZg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg4-tS-xT5">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="3mL-Eo-uX9"/>
+                                                    <constraint firstAttribute="width" constant="30" id="hlL-Bh-Zek"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="music.png"/>
+                                                <connections>
+                                                    <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYN-Cn-IHm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sux-VN-SlV" firstAttribute="top" secondItem="wpi-Nl-8bV" secondAttribute="topMargin" constant="10" id="JNB-pF-zbs"/>
+                                            <constraint firstItem="jg4-tS-xT5" firstAttribute="leading" secondItem="sux-VN-SlV" secondAttribute="trailing" id="Jkk-tQ-t8Z"/>
+                                            <constraint firstItem="sux-VN-SlV" firstAttribute="leading" secondItem="3fx-JT-K5T" secondAttribute="trailing" id="yFd-xa-H6r"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.41939662259999999" blue="0.37535637640000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wpi-Nl-8bV" firstAttribute="top" secondItem="yRK-P8-242" secondAttribute="topMargin" id="F1r-Jp-kad"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="wpi-Nl-8bV" secondAttribute="trailing" id="FFp-o7-no3"/>
+                                    <constraint firstItem="wpi-Nl-8bV" firstAttribute="centerX" secondItem="yRK-P8-242" secondAttribute="centerX" id="Rzq-eR-HZ3"/>
+                                    <constraint firstItem="wpi-Nl-8bV" firstAttribute="top" secondItem="yRK-P8-242" secondAttribute="topMargin" id="jPq-6O-Jal"/>
+                                    <constraint firstItem="wpi-Nl-8bV" firstAttribute="leading" secondItem="yRK-P8-242" secondAttribute="leadingMargin" id="kT2-Uy-1am"/>
+                                    <constraint firstAttribute="height" constant="65" id="t7J-Ke-X2h"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dkX-hS-J6J">
+                                <segments>
+                                    <segment title="Bio"/>
+                                    <segment title="Moves"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="sux-VN-SlV" firstAttribute="centerY" secondItem="9kH-HL-Q5a" secondAttribute="centerY" id="8mU-Qj-WKJ"/>
-                            <constraint firstItem="sux-VN-SlV" firstAttribute="centerX" secondItem="9kH-HL-Q5a" secondAttribute="centerX" id="WBw-3g-D3m"/>
+                            <constraint firstItem="yRK-P8-242" firstAttribute="leading" secondItem="9kH-HL-Q5a" secondAttribute="leading" id="052-cm-62I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dkX-hS-J6J" secondAttribute="trailing" id="6wT-vT-Zle"/>
+                            <constraint firstAttribute="trailing" secondItem="yRK-P8-242" secondAttribute="trailing" id="Aiv-uf-M0r"/>
+                            <constraint firstItem="dkX-hS-J6J" firstAttribute="leading" secondItem="9kH-HL-Q5a" secondAttribute="leadingMargin" id="hRS-q0-V5B"/>
+                            <constraint firstItem="dkX-hS-J6J" firstAttribute="top" secondItem="yRK-P8-242" secondAttribute="bottom" constant="8" id="mis-5p-lGt"/>
+                            <constraint firstItem="yRK-P8-242" firstAttribute="top" secondItem="9kH-HL-Q5a" secondAttribute="top" id="p28-vz-lN4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -174,6 +228,7 @@
     </scenes>
     <resources>
         <image name="25" width="120" height="120"/>
+        <image name="back" width="100" height="67"/>
         <image name="background" width="1131" height="707"/>
         <image name="music.png" width="100" height="100"/>
     </resources>
