@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UITextViewDelegate {
 // UICollectionViewDelegate = This class is the delegate for the collection view
    
     @IBOutlet weak var collection: UICollectionView!
@@ -34,6 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         searchBar.returnKeyType = UIReturnKeyType.done
         
+        
         parsePokemonCSV()
         initAudio()
     }
@@ -54,6 +55,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+
+    
     func parsePokemonCSV() {
         
         let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
@@ -61,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         do {
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            print(rows)
+            
             
             for row in rows {
                 
